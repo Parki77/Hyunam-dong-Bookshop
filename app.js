@@ -8,7 +8,10 @@ const books=require("./routes/book")
 const favourite=require("./routes/favourite")
 const Cart=require("./routes/cart")
 const Order=require("./routes/order")
-app.use(cors());
+app.use(cors({
+  origin: 'https://euphonious-daifuku-ca073e.netlify.app',
+  credentials: true, // only if you use cookies/auth
+}));
 app.use(express.json());
 
 
